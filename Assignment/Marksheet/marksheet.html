@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 100vh;
+            text-align: center;
+            width: 70%;
+            margin: auto;
+
+        }
+
+        ol {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 10px;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 50%;
+            padding: 10px 0;
+        }
+
+        li input {
+            width: 40%;
+            margin-right: 20%;
+
+        }
+
+
+
+        .enter,
+        .result {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .button {
+            height: 35px;
+            width: 100px;
+            margin-top: 10px;
+            margin-left: 32px;
+        }
+
+        .title {
+            margin-right: 2%;
+            font-weight: bolder;
+        }
+
+        .combined {
+            display: flex;
+            justify-content: space-evenly;
+            width: 68%;
+            margin: auto;
+            padding-top: 20px;
+        }
+
+
+        @media (min-width: 769px) and (max-width:1000px) {
+            .container {
+                width: 100%;
+            }
+
+            .button {
+                width: 16%;
+                margin-left: 8%;
+            }
+
+            li {
+                padding: 5px 0;
+                width: 60%;
+
+            }
+        }
+
+        @media (max-width: 768px) {
+
+
+            .container {
+                width: 100%;
+
+            }
+
+
+            .combined {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+
+            }
+
+
+            .title {
+                font-size: 1.5rem;
+            }
+
+            li {
+                padding: 5px 0;
+                width: 80%;
+
+            }
+
+            .button {
+                width: 20%;
+
+
+                margin-left: 8%;
+
+            }
+
+            #pr {
+                padding-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+            <h2 class="title">Marksheet for Information technology</h2>
+            <div class="enter">Enter marks</div>
+            <ol type="1">
+                <li>1. C language &nbsp;:<input type="number" id="c"></li>
+                <li>2. C++ language<input type="number" id="cpp"></li>
+                <li>3. Database :<input type="number" id="db"></li>
+                <li>4. HTML :<input type="number" id="html"></li>
+                <li>5. CSS :<input type="number" id="css"></li>
+                <li>6. php :<input type="number" id="php"></li>
+                <li>7. Core java :<input type="number" id="java"></li>
+            </ol>
+
+
+            <button class="button" id="result" onclick="sum(event)">result</button><br>
+            <div class="combined">
+                <span class="mark" id="marks"></span>
+                <span class="Percentage" id="pr"></span>
+            </div>
+        </form>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
